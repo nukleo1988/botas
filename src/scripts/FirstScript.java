@@ -15,7 +15,7 @@ import java.awt.*;
 /**
  * Created by xeon on 17.3.7.
  */
-@ScriptManifest(authors = {"Ghandi"}, category = "Misc", name = "Testai", description = "Testine klase naujiems metodams testuoti.")
+@ScriptManifest(authors = {"Ghandi"}, category = "Misc", name = "BAndymas", description = "Testine klase naujiems metodams testuoti.")
 
 public class FirstScript extends Script implements Painting {
 
