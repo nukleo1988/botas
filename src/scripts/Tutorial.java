@@ -16,7 +16,7 @@ import java.awt.*;
 //kamikadze@gafy.net
 
 /**
- * Created by xeon on 17.3.7.
+ * Created by xeon on 17.3.22.
  */
 @ScriptManifest(authors = {"Ghandi"}, category = "Misc", name = "Tutorial", description = "Testine klase naujiems metodams testuoti.")
 
@@ -33,12 +33,12 @@ public class Tutorial extends Script implements Painting {
         return true;
 
     }
-    @Override
+
+    //@Override
     public void run() {
         if (onStart()) {
-            while (true) {
-                sleep(loop());
-            }
+            sleep(loop());
+
         }
     }
     public void Test() {
@@ -50,6 +50,7 @@ public class Tutorial extends Script implements Painting {
         RSNPC[] oponent = NPCs.findNearest(names);
         if (oponent.length != 0) {
             RSNPC name = oponent[0];
+            sleep(4000);
             if (name == null)
                 return false;
             if (name.isOnScreen()) {
@@ -75,6 +76,7 @@ public class Tutorial extends Script implements Painting {
 
             }
         } else {
+
             return false;
         }
     return true;
@@ -96,14 +98,15 @@ public class Tutorial extends Script implements Painting {
 
 
     private int loop() {
-        while (true) {
+        while (onStart()) {
           //  nearBanker();
                 talkToOponent();
                 sleep(3000, 7000);
 
 
-              return 42;
+             // return 42;
         }
+        return 45;
     }
     @Override
     public void onPaint(Graphics g) {
